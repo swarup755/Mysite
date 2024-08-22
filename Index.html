@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="Style.css">
     <meta charset="UTF-8">
-    <title>Swarup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Checkbox</title>
+    <script>
+        function addCheckbox() {
+            // টেক্সট বক্স থেকে ভেলু নেওয়া
+            const text = document.getElementById('inputText').value;
+
+            // নতুন ডিভ তৈরি করা
+            const newDiv = document.createElement('div');
+
+            // লেবেল তৈরি করা
+            const newLabel = document.createElement('label');
+            newLabel.textContent = text;
+
+            // চেকবক্স তৈরি করা
+            var vlc = document.getElementById("vlc");
+            const newCheckbox = document.createElement('input');
+            newCheckbox.type = 'checkbox';
+            newCheckbox.value = vlc;
+
+            // লেবেল এবং চেকবক্স ডিভের ভিতরে যোগ করা
+            newLabel.appendChild(newCheckbox);
+            newDiv.appendChild(newLabel);
+
+            // মূল ডিভে নতুন ডিভ যোগ করা
+            document.getElementById('container').appendChild(newDiv);
+            
+        }
+        
+    </script>
 </head>
 <body>
-    
-    hendrerit vulputate altera vidisse splendide dico ullamcorper wisi rutrum mazim vero imperdiet sem singulis falli offendit sapien risus suscipit singulis deseruisse platonem postea imperdiet natoque viris nominavi graecis labores eleifend ornare ex suscipiantur intellegebat detraxit ipsum nobis euismod sapien duis ridiculus eirmod praesent periculis postulant adolescens mediocrem parturient sem ius quo morbi suscipit sagittis metus iudicabit intellegebat adipisci egestas persius tincidunt consul reprehendunt netus natoque eloquentiam natum ocurreret cetero quaerendum nisi semper antiopam quidam maecenas principes suavitate at voluptatum recteque cras consequat ac laudem purus interdum a ut vix vix vehicula possim montes orci egestas ante vidisse sadipscing wisi movetarcu legimus error non magna referrentur adipisci ipsum epicurei dolore vestibulum eirmod voluptaria contentiones arcu habeo aptent natoque eum congue postea est labores consectetur posidonium dicunt alterum appareat quot quaerendum falli affert noluisse tibique intellegat urna civibus suavitate commodo qualisque an noluisse pri ius explicari brute aliquet numquam eius numquam turpis eum lobortis volumus verterem tibique fringilla delicata nisl dolore noluisse wisi prompta omnesque enim mazim viverra rutrum sagittis sollicitudin fastidii quem deterruisset ornatus dignissim quidam constituam dicit prodesset placerat dapibus persequeris felis nulla theophrastus conclusionemque per ultricies id eu cu gravida vero comprehensam tale conclusionemque quis velit sed erroribusnullam id ornatus per percipit adipiscing non pri dicat nihil tamquam eripuit fastidii ferri dico error vim voluptaria solet tellus tibique utroque impetus voluptatum autem explicari tation conceptam repudiandae adipisci felis metus prodesset veri voluptatum graeci detraxit alia hinc sit mucius dolorem molestie comprehensam mnesarchum aptent saperet hac ut proin deterruisset nam iaculis eripuit dictum pharetra inimicus definiebas laoreet parturient venenatis vehicula consectetuer sit mutat quis solet accumsan faucibus ridens dicit evertitur eu oporteat donec vocent appareat proin volutpat deserunt maluisset saepe persius nostra minim massa latine mauris doming sapien pri augue usu instructior atomorum possit malesuada qualisque persius urbanitasnostrum dicant quas massa non nisi saperet solum no diam quaestio vestibulum ligula equidem dico legimus molestie orci consetetur percipit vidisse mus sapientem brute convallis putent iudicabit deseruisse inani comprehensam interdum lectus commodo auctor suscipit dolorum litora fringilla pretium mediocritatem sed solum eget perpetua ridens epicurei sem quem malorum doming consequat nibh similique mediocrem sale nonumes mazim melius mnesarchum mediocrem arcu doctus sapien regione diam luptatum offendit malorum usu deseruisse eget eloquentiam mucius cetero platonem maecenas et etiam posuere morbi duo dictumst populo te propriae veniam ea habemus pertinacia option tractatos evertitur est sonet pulvinar ignota quaestio sadipscing sadipscing sodalesvivendo potenti iusto justo euismod voluptaria rhoncus dictum senectus adversarium pellentesque repudiare dolorem aliquip persecuti dicam eirmod suscipit dictas impetus petentium mediocrem affert tation lectus pellentesque vidisse ullamcorper ullamcorper turpis dicam sociis iriure tortor petentium porta audire bibendum non omittam amet quidam expetendis quo recteque indoctum ipsum ad iisque graecis etiam gloriatur agam convallis litora alienum dicant signiferumque metus vivendo ligula libero ludus aliquet suscipit prompta legimus turpis curabitur tamquam iisque semper nullam suscipiantur fuisset morbi error ludus nascetur vivamus vix dui semper epicuri consectetur erroribus ullamcorper bibendum malorum potenti invenire turpis scripta placerat corrumpit singulis vivamus euripidis aeque ac
-    
-    
-    
+	<input type="text" id="vlc">
+    <input type="text" id="inputText" placeholder="লিখুন">
+    <button onclick="addCheckbox()">যোগ করুন</button>
+    <div id="container"></div>
 </body>
 </html>
